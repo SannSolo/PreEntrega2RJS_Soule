@@ -1,0 +1,41 @@
+@font-face{
+    font-family: aileron;
+    src: url(./font/Aileron/Aileron-Light.otf);
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+.card-title {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+
+.card-description {
+  font-size: 16px;
+  color: #666;
+}
+
+.card-content {
+  padding: 16px;
+}
