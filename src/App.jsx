@@ -2,10 +2,12 @@ import './App.css'
 import Navbar from "./components/Navbar"
 import ItemListContainer from './components/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Accesorios } from './components/Pages/Accesorios';
-import { About } from './components/Pages/About';
-import { PrendasI } from './components/Pages/PrendasI';
-import { PrendasS } from './components/Pages/PrendasS';
+import  Accesorios  from './components/Pages/Accesorios';
+import  About  from './components/Pages/About';
+import  PrendasI  from './components/Pages/PrendasI';
+import  PrendasS  from './components/Pages/PrendasS';
+import { CartContext } from './context/cartContext';
+
 
 function App() {
     return (
@@ -13,6 +15,7 @@ function App() {
         <nav>
             <main style={{ width:"100%", height:"100%"}}>
 
+            <CartContext.Provider value={[]}>            
             <BrowserRouter>
             <Navbar />  
             <Routes>
@@ -26,6 +29,7 @@ function App() {
             </BrowserRouter>
 
             <ItemListContainer />
+            </CartContext.Provider>
 
             </main>
         </nav>

@@ -1,14 +1,15 @@
-// import React from 'react';
-
-// function Accesorios() {
-//     return (
-//         <div className="card">
-//         <img  />
-//         <h3>ACCESORIOS</h3>
-//         <p>ID: </p>
-//         <p>Precio: <span className="price">$</span></p>
-//       </div>    
-//  )}
+import React from 'react';
+import tarjeta from "../ItemList/ItemList"
+import ItemCount from '../ItemCount/ItemCount';
+function Accesorios() {
+    return (
+      <>
+          
+    
+      </>
+      
+      
+ )}
 
  
-// export default Accesorios; 
+export default Accesorios; 

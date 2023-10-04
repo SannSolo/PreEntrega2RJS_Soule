@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
+import ItemList from "../ItemList/ItemList";
+import ItemCount from "../ItemCount/ItemCount";
 
-
-const ItemListContainer = () => {
-  return (<p>hola</p>)
+const ItemListContainer = () => { 
+  return (
+    <>
+      <ItemList />
+      
+    </>
+  );
 }
 
 export default ItemListContainer;
-
-
