@@ -1,24 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./cardstyle.css";
 import ItemCount from "../ItemCount/ItemCount";
 
 
-const ItemList = () => {
-  return (  
-    <>
-    <div class="card">
-    <img src="imagen.jpg" alt="Imagen de la tarjeta"></img>
-    <div class="card-info">
-        <h2>Título de la tarjeta</h2>
-        <p>Descripción de la tarjeta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <button class="card-button">Ver detalles</button>
-        <ItemCount />
-    </div>
-</div>
-      
-    </>
+
+
+const ProductCard = ({imge="Sin Imgaen", title=" " ,description=" ", price=0}) => {
+    const [product, setProducts] = useState ([])
+
+    useEffect(() =>{
+        fetch('https://fakestoreapi.com/products')
+                .then(res=>res.json())
+                .then(json=>console.log(json))
+    }, [])
+
+
+    return (  
+            <div class="card">
+            <img src={product.image} alt="Imagen de la tarjeta"></img>
+            <div class="card-info">
+                <h2>{product.title}</h2>
+                <p>{product.description}</p>
+                <span>{product.price}</span>
+                <button class="card-button">Ver detalles</button>
+            </div>
+        </div>
+    
     )
   
 }
 
-export default ItemList;
+export default ProductCard;

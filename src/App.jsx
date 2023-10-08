@@ -9,6 +9,7 @@ import  PrendasS  from './components/Pages/PrendasS';
 import { CartContext } from './context/cartContext';
 
 
+
 function App() {
     return (
         
@@ -27,6 +28,7 @@ function App() {
                 <Route path='*' element={<h1>NO SE ENCONTRO</h1>} />
             </Routes>
             </BrowserRouter>
+        
 
             <ItemListContainer />
             </CartContext.Provider>
